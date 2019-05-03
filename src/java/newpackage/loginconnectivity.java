@@ -7,7 +7,7 @@ boolean status=false;
 try{  
 Class.forName("com.mysql.jdbc.Driver");  
 Connection con=DriverManager.getConnection(  
-"jdbc:mysql://localhost:3306/login_detail?useSSL=false","root","rkshukla12");  
+"jdbc:mysql://localhost:3306/login_detail?useSSL=false&allowPublicKeyRetrieval=true","root","rkshukla12");  
       
 PreparedStatement ps=con.prepareStatement(  
 "select * from logindata where UserName=? and Password=?");  
